@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SnackCheck</string>
+    <string name="bar_sun">S</string>
+    <string name="bar_mon">M</string>
+    <string name="bar_tue">T</string>
+    <string name="bar_wed">W</string>
+    <string name="bar_thu">T</string>
+    <string name="bar_fri">F</string>
+    <string name="bar_sat">S</string>
+</resources>
