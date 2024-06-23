@@ -7,4 +7,9 @@
     <string name="bar_thu">T</string>
     <string name="bar_fri">F</string>
     <string name="bar_sat">S</string>
+
+    <string name="settings_default">Settings</string>
+    <string name="settings_close">Close</string>
+
+    <string name="preference">prefsforsnack</string>
 </resources>

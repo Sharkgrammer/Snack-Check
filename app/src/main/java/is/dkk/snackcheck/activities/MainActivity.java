@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -21,6 +22,9 @@ import is.dkk.snackcheck.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean settingsShown = false;
+    SettingsFragment settings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,20 +36,27 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
         Button btnSettings = findViewById(R.id.btnSettings);
 
         FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-
-        transaction.add(R.id.fragment_container, new MainFragment());
-        transaction.commit();
+        settings = new SettingsFragment(this);
 
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentTransaction transaction = manager.beginTransaction();
 
-                transaction.replace(R.id.fragment_container, new SettingsFragment());
+                if (settingsShown) {
+                    transaction.remove(settings);
+                    btnSettings.setText(R.string.settings_default);
+                } else {
+                    transaction.replace(R.id.fragment_container, settings);
+                    btnSettings.setText(R.string.settings_close);
+                }
+
+                settingsShown = !settingsShown;
                 transaction.commit();
             }
         });

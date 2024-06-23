@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Width / Height -->
+    <dimen name="btn_day_dimen">40dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="btn_day_padding">0dp</dimen>
+
+    <!-- Text -->
+    <dimen name="btn_day_text">20sp</dimen>
+
+</resources>
