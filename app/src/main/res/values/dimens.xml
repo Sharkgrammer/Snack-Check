@@ -7,7 +7,12 @@
     <!-- Padding -->
     <dimen name="btn_day_padding">0dp</dimen>
 
+    <!-- Margin -->
+    <dimen name="btn_hor_margin">5dp</dimen>
+
     <!-- Text -->
     <dimen name="btn_day_text">20sp</dimen>
+    <dimen name="txt_large">30sp</dimen>
+    <dimen name="txt_med">24sp</dimen>
 
 </resources>
