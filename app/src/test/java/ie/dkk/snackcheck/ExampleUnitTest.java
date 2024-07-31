@@ -1,4 +1,4 @@
-package is.dkk.snackcheck;
+package ie.dkk.snackcheck;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package is.dkk.snackcheck;
+package ie.dkk.snackcheck;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("is.dkk.snackcheck", appContext.getPackageName());
+        assertEquals("ie.dkk.snackcheck", appContext.getPackageName());
     }
 }

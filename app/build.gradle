@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'is.dkk.snackcheck'
+    namespace 'ie.dkk.snackcheck'
     compileSdk 34
 
     defaultConfig {
-        applicationId "is.dkk.snackcheck"
+        applicationId "ie.dkk.snackcheck"
         minSdk 30
         targetSdk 34
         versionCode 1
