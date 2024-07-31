@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkToday() {
         getToday();
+
         int left = daysToSnack(), str;
 
         switch (left) {
@@ -142,6 +143,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 1:
                 str = R.string.day_left;
+                break;
+            case 10:
+                str = R.string.no_days;
                 break;
             default:
                 str = R.string.days_left;
@@ -152,10 +156,11 @@ public class MainActivity extends AppCompatActivity {
 
         StringBuilder builder = new StringBuilder();
 
-        if (left != 0) {
+        if (left != 0 && left != 10) {
             builder.append(left);
             builder.append(" ");
         }
+
         builder.append(getString(str));
 
         txtTimeLeft.setText(builder.toString());
@@ -173,6 +178,12 @@ public class MainActivity extends AppCompatActivity {
 
                 if (loop >= 7) {
                     loop = 0;
+                }
+
+                // Rather than check the loop for duds beforehand, if the loop passes a week break
+                if (counter > 7){
+                    counter = 10;
+                    break;
                 }
 
             }

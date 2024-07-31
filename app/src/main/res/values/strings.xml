@@ -25,5 +25,6 @@
 
     <string name="days_left"> Days Till Snack</string>
     <string name="day_left"> Day Till Snack</string>
+    <string name="no_days">No Days Selected</string>
     <string name="days_0">Snack Day!</string>
 </resources>
